@@ -13,6 +13,15 @@ class Menu extends Component {
             <NavLink to="/plantmain">Explore Plants</NavLink>
           </li>
           <li>
+            <NavLink to="/addplant">Add Plant</NavLink>
+          </li>
+          <li>
+            <NavLink to="/plantdetails/:VegetableCode">Plant Details</NavLink>
+          </li>
+          <li>
+            <NavLink to="/displayusers">Display Users</NavLink>
+          </li>
+          <li>
             <NavLink to="/contact">Contact Us</NavLink>
           </li>
         </ul>
