@@ -1,69 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<img src="images/plant-parent-logo.png">
 
-## Available Scripts
+#### Purpose of the app:
 
-In the project directory, you can run:
+This app is for users to manage the health and nutrition of their beloved plants. Whether they are just beginning their plant parenthood journey, or have been raising plants for years, this app is an invaluable tool for care.
 
-### `npm start`
+#### How to use:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A user will create an account with an email address and password. The user will browse the list of plant species and select the ones that are raising. Once at least one plant has been selected, the user can view which plants they have assigned to their account.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### Features on the app:
 
-### `npm test`
+- Plants are added to the user's account database by name. Users will be able to access info about the plant species and care instructions including watering, sunlight, and nutrient needs. Individual plant needs are broken down by user's geolocation tag and current weather patterns to advise them of when to water or fertilize a plant. App will display the amount of days remaining until it's time to water or fertilize a plant, e.g "Water me in two days", "Water me today!", "Feed me in 10 days."
+- Users can name their plant, including taking a "baby photo" of their plant to document the growth of their little sprout.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Future features:
 
-### `npm run build`
+- Moisture sensor integration to give accurate, detailed information about water and soil needs.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Site Preview
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+##### Home Page:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### Login Page:
 
-### `npm run eject`
+## Live Link
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[sample link](http://www.google.com)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## This site was built by:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[Amy Roy](https://github.com/MeerKatnip)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Database and APIs used:
 
-## Learn More
+[Vegetable Plant API](http://highoncoding.com/vegetable/getcatalog)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[OpenWeather API](https://openweathermap.org/api)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Languages and Frameworks used:
 
-### Code Splitting
+JavaScript, React, Redux, Node.js, PostgreSQL, Bootstrap
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# Plant-Parent2.0
+> Written by Amy Roy with [StackEdit](https://stackedit.io/).
