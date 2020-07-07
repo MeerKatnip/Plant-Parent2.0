@@ -1,5 +1,5 @@
 <p align="center">
-<img src="images/plant-parent-logo.png">
+<img src="plantparent2.0/public/plant-parent-logo.png">
 
 #### Purpose of the app:
 
