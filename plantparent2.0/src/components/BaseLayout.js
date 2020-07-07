@@ -3,7 +3,8 @@ import Menu from "../components/Menu";
 import Counter from "../components/Counter";
 import Plants from "../components/Plants";
 import TextInput from "../components/TextInput";
-import App from "../App";
+import PlantMain from "../PlantMain";
+import Home from "../components/Home";
 
 class BaseLayout extends Component {
   render() {

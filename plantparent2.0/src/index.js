@@ -1,20 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import PlantMain from "./PlantMain";
 import * as serviceWorker from "./serviceWorker";
 import BaseLayout from "./components/BaseLayout";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Plants from "./components/Plants";
 import ContactUs from "./components/ContactUs";
+import Home from "./components/Home";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <BaseLayout>
         <Switch>
-          <Route component={App} path="/" exact />
-          <Route component={Plants} path="/exploreplants" />
+          <Route component={Home} path="/" exact />
+          <Route component={PlantMain} path="/plantmain" />
           <Route component={ContactUs} path="/contact" />
         </Switch>
       </BaseLayout>
