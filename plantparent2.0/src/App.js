@@ -33,7 +33,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Menu />
         <Counter />
         <TextInput />
         <Plants listOfPlants={this.state.plants} />

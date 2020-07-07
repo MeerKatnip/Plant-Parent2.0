@@ -13,9 +13,14 @@ class TextInput extends Component {
   handleTextboxChange = (e) => {
     console.log(e.target.name);
 
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
+    this.setState(
+      {
+        [e.target.name]: e.target.value,
+      },
+      () => {
+        console.log(this.state.name);
+      }
+    );
   };
 
   render() {

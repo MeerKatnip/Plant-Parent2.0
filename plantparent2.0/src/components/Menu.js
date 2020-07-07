@@ -1,13 +1,22 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 class Menu extends Component {
   render() {
     return (
-      <ul>
-        <li>Home</li>
-        <li>Contact Us</li>
-        <li>About Us</li>
-      </ul>
+      <div>
+        <ul>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/exploreplants">MyGreenhouse</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact Us</NavLink>
+          </li>
+        </ul>
+      </div>
     );
   }
 }
