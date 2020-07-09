@@ -19,15 +19,6 @@ class Menu extends Component {
             <NavLink to="/plantdetails/:VegetableCode">Plant Details</NavLink>
           </li>
           <li>
-            <NavLink to="/displayusers">Display Users</NavLink>
-          </li>
-          <li>
-            <NavLink to="/userinput">User Input</NavLink>
-          </li>
-          <li>
-            <NavLink to="/ctrredux">Counter (Redux)</NavLink>
-          </li>
-          <li>
             <NavLink to="/contact">Contact Us</NavLink>
           </li>
         </ul>

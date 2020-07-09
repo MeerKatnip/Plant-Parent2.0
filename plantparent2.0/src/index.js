@@ -36,9 +36,6 @@ ReactDOM.render(
               path="/plantdetails/:VegetableCode"
             />
             <Route component={ContactUs} path="/contact" />
-            <Route component={DisplayUsers} path="/displayusers" />
-            <Route component={UserInput} path="/userinput" />
-            <Route component={CtrRedux} path="/ctrredux" />
           </Switch>
         </BaseLayout>
       </Provider>
