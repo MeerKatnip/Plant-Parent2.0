@@ -5,6 +5,7 @@ import Plants from "../components/Plants";
 import TextInput from "../components/TextInput";
 import PlantMain from "../PlantMain";
 import Home from "../components/Home";
+import AnotherCounter from "./AnotherCounter";
 
 class BaseLayout extends Component {
   render() {
@@ -19,3 +20,11 @@ class BaseLayout extends Component {
 }
 
 export default BaseLayout;
+
+//allows child to update parent using a callback function, baselayout.js is parent and counter.js is child
+
+//child cannot directly talk to siblings, which are other child components. But the child can talk to the parent, and the parent can talk to the sibling child.
+
+//AnotherCounter.js is the sibling of counter.js. Pass the properties from the parent to the additional child.
+
+//to reduce chaining, you can set a Global State. This allows any children to access the properties without having to back out through multiple parents.
