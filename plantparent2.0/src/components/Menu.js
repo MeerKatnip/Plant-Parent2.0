@@ -27,6 +27,7 @@ class Menu extends Component {
             <Nav className="mr-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/plantmain">Explore Plants</Nav.Link>
+
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
@@ -40,6 +41,7 @@ class Menu extends Component {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
+              <Nav.Link href="/contactus">Contact Us</Nav.Link>
             </Nav>
             <Form inline>
               <FormControl

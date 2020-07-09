@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Breadcrumb from "react-bootstrap/Breadcrumb";
 
 class PlantDetails extends Component {
   componentDidMount() {
@@ -6,7 +7,15 @@ class PlantDetails extends Component {
   }
 
   render() {
-    return <h1>Plant Details</h1>;
+    return (
+      <span>
+        <Breadcrumb>
+          <Breadcrumb.Item href="/plantmain">Explore Plants</Breadcrumb.Item>
+          <Breadcrumb.Item active>Plant Details</Breadcrumb.Item>
+        </Breadcrumb>
+        <h1>Plant Details</h1>
+      </span>
+    );
   }
 }
 
