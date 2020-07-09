@@ -6,13 +6,17 @@ import Post from "./components/Post";
 import Counter from "./components/Counter";
 import Plants from "./components/Plants";
 import TextInput from "./components/TextInput";
+import Home from "./components/Home";
 
-class App extends Component {
+// Fetches and renders plants from API
+
+// "https://cors-anywhere.herokuapp.com/" +
+
+class PlantMain extends Component {
   constructor() {
     super();
 
     this.state = {
-      counter: 0,
       plants: [],
     };
   }
@@ -33,12 +37,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Counter />
-        <TextInput />
         <Plants listOfPlants={this.state.plants} />
       </div>
     );
   }
 }
 
-export default App;
+export default PlantMain;

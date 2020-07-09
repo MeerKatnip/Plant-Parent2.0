@@ -1,23 +1,44 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import PlantMain from "./PlantMain";
 import * as serviceWorker from "./serviceWorker";
 import BaseLayout from "./components/BaseLayout";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Plants from "./components/Plants";
 import ContactUs from "./components/ContactUs";
+import Home from "./components/Home";
+import AddPlant from "./components/AddPlant";
+import PlantDetails from "./components/PlantDetails";
+import DisplayUsers from "./components/DisplayUsers";
+import UserInput from "./components/UserInput";
+import CtrRedux from "./components/CtrRedux";
+import { createStore } from "redux";
+import reducer from "./store/reducer";
+import { Provider } from "react-redux";
+
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <BaseLayout>
-        <Switch>
-          <Route component={App} path="/" exact />
-          <Route component={Plants} path="/exploreplants" />
-          <Route component={ContactUs} path="/contact" />
-        </Switch>
-      </BaseLayout>
+      <Provider store={store}>
+        <BaseLayout>
+          <Switch>
+            <Route component={Home} path="/" exact />
+            <Route component={PlantMain} path="/plantmain" />
+            <Route component={AddPlant} path="/addplant" />
+            <Route
+              component={PlantDetails}
+              path="/plantdetails/:VegetableCode"
+            />
+            <Route component={ContactUs} path="/contact" />
+          </Switch>
+        </BaseLayout>
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
