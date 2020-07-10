@@ -12,6 +12,7 @@ import ContactUs from "./components/ContactUs";
 import Home from "./components/Home";
 import AddPlant from "./components/AddPlant";
 import PlantDetails from "./components/PlantDetails";
+import NewUser from "./components/NewUser";
 import DisplayUsers from "./components/DisplayUsers";
 import UserInput from "./components/UserInput";
 import CtrRedux from "./components/CtrRedux";
@@ -34,6 +35,7 @@ ReactDOM.render(
             <Route component={PlantMain} path="/plantmain" />
             <Route component={AddPlant} path="/addplant" />
             <Route component={PlantDetails} path="/plantdetails" />
+            <Route component={NewUser} path="/newuser" />
             <Route component={ContactUs} path="/contact" />
           </Switch>
         </BaseLayout>

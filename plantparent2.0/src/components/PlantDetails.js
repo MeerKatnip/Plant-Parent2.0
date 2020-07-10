@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Plants from "./Plants";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 
 class PlantDetails extends Component {
