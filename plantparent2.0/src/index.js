@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Tabs, Tab } from "react-bootstrap";
+// import { Tabs, Tab } from "react-bootstrap";
 import "./index.css";
 import PlantMain from "./PlantMain";
 import * as serviceWorker from "./serviceWorker";
@@ -15,7 +15,7 @@ import PlantDetails from "./components/PlantDetails";
 import NewUser from "./components/NewUser";
 import DisplayUsers from "./components/DisplayUsers";
 import UserInput from "./components/UserInput";
-import CtrRedux from "./components/CtrRedux";
+// import CtrRedux from "./components/CtrRedux";
 import { createStore } from "redux";
 import reducer from "./store/reducer";
 import { Provider } from "react-redux";

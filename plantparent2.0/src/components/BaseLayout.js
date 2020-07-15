@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Menu from "../components/Menu";
 
 import Counter from "../components/Counter";
-import Plants from "../components/Plants";
+// import Plants from "../components/Plants";
 import TextInput from "../components/TextInput";
-import PlantMain from "../PlantMain";
+// import PlantMain from "../PlantMain";
 import Home from "../components/Home";
 import AnotherCounter from "./AnotherCounter";
 

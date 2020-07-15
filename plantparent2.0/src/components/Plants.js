@@ -8,8 +8,6 @@ import { NavLink } from 'react-router-dom'
 
 function Plants(props) {
 
-  // plant details 
-   // props.match.params.vegetableId
 
     let plantItems = props.listOfPlants.map((plant) => {
       return (
@@ -41,7 +39,7 @@ function Plants(props) {
           <Breadcrumb.Item active>Explore Plants</Breadcrumb.Item>
           
         </Breadcrumb>
-        <h1> All Plants </h1>
+        <h1> Explore Plants </h1>
         <CardDeck>{plantItems}</CardDeck>
       </div>
     );

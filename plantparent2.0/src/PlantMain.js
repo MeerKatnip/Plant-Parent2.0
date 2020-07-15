@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
+import React, { useEffect } from "react";
+// import logo from "./logo.svg";
 import "./App.css";
-import Menu from "./components/Menu";
-import Post from "./components/Post";
-import Counter from "./components/Counter";
+// import Menu from "./components/Menu";
+// import Post from "./components/Post";
+// import Counter from "./components/Counter";
 import Plants from "./components/Plants";
-import TextInput from "./components/TextInput";
-import Home from "./components/Home";
+// import TextInput from "./components/TextInput";
+// import Home from "./components/Home";
 import { connect } from 'react-redux'
 
 

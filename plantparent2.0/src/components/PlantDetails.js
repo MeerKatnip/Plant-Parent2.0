@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Plants from "./Plants";
+// import Plants from "./Plants";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import { connect } from 'react-redux'
 
