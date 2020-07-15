@@ -27,7 +27,28 @@ function PlantDetails(props) {
           <Breadcrumb.Item active>Plant Details</Breadcrumb.Item>
         </Breadcrumb>
         <h1>Plant Details</h1>
-    <p>{singlePlant.Name}</p>
+        <h2>{singlePlant.Name}</h2>
+        <img src={singlePlant.ThumbnailImage} />
+        <p>{singlePlant.Description}</p>
+        Light: {singlePlant.Light}
+        Water: {singlePlant.Watering}
+        Season: {singlePlant.Season}
+        Seed Depth: {singlePlant.SeedDepth}
+        Germination Soil Temp: {singlePlant.GerminationSoilTemp}
+        Days to Germination: {singlePlant.DaysToGermination}
+        Sow Indoors: {singlePlant.SowIndoors}
+        Sow Outdoors: {singlePlant.SowOutdoors}
+        PH Range: {singlePlant.PhRange}
+        Growing Soil Temp: {singlePlant.GrowingSoilTemp}
+        Spacing between Beds: {singlePlant.SpacingBeds}
+        Good Companions: {singlePlant.GoodCompanions}
+        Bad Companions: {singlePlant.BadCompanions}
+        <p>Sowing Description: {singlePlant.SowingDescription}</p>
+        <p>Growing Description: {singlePlant.GrowingDescription}</p>
+        <p>Harvest Description: {singlePlant.HarvestDescription}</p>
+        Days to Harvest Seeds: {singlePlant.DaysToHarvestSeeds}
+        Days to Harvest Seedlings: {singlePlant.DaysToHarvestSeedlings}
+    
       </span>
     )
       
