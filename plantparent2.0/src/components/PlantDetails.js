@@ -24,30 +24,30 @@ function PlantDetails(props) {
       <span>
         <Breadcrumb>
           <Breadcrumb.Item href="/plantmain">Explore Plants</Breadcrumb.Item>
-          <Breadcrumb.Item active>Plant Details</Breadcrumb.Item>
+          <Breadcrumb.Item active>{singlePlant.Name}</Breadcrumb.Item>
         </Breadcrumb>
         <h1>Plant Details</h1>
         <h2>{singlePlant.Name}</h2>
         <img src={singlePlant.ThumbnailImage} />
         <p>{singlePlant.Description}</p>
-        Light: {singlePlant.Light}
-        Water: {singlePlant.Watering}
-        Season: {singlePlant.Season}
-        Seed Depth: {singlePlant.SeedDepth}
-        Germination Soil Temp: {singlePlant.GerminationSoilTemp}
-        Days to Germination: {singlePlant.DaysToGermination}
-        Sow Indoors: {singlePlant.SowIndoors}
-        Sow Outdoors: {singlePlant.SowOutdoors}
-        PH Range: {singlePlant.PhRange}
-        Growing Soil Temp: {singlePlant.GrowingSoilTemp}
-        Spacing between Beds: {singlePlant.SpacingBeds}
-        Good Companions: {singlePlant.GoodCompanions}
-        Bad Companions: {singlePlant.BadCompanions}
+        Light: {singlePlant.Light} <br/>
+        Water: {singlePlant.Watering} <br/>
+        Season: {singlePlant.Season} <br/>
+        Seed Depth: {singlePlant.SeedDepth} <br/>
+        Germination Soil Temp: {singlePlant.GerminationSoilTemp}<br/>
+        Days to Germination: {singlePlant.DaysToGermination}<br/>
+        Sow Indoors: {singlePlant.SowIndoors}<br/>
+        Sow Outdoors: {singlePlant.SowOutdoors}<br/>
+        Soil PH Range: {singlePlant.PhRange}<br/>
+        Growing Soil Temp: {singlePlant.GrowingSoilTemp}<br/>
+        Spacing between Beds: {singlePlant.SpacingBeds}<br/>
+        Good Companions: {singlePlant.GoodCompanions}<br/>
+        Bad Companions: {singlePlant.BadCompanions}<br/>
         <p>Sowing Description: {singlePlant.SowingDescription}</p>
         <p>Growing Description: {singlePlant.GrowingDescription}</p>
         <p>Harvest Description: {singlePlant.HarvestDescription}</p>
-        Days to Harvest Seeds: {singlePlant.DaysToHarvestSeeds}
-        Days to Harvest Seedlings: {singlePlant.DaysToHarvestSeedlings}
+        Days to Harvest Seeds: {singlePlant.DaysToHarvestSeeds}<br/>
+        Days to Harvest Seedlings: {singlePlant.DaysToHarvestSeedlings}<br/>
     
       </span>
     )

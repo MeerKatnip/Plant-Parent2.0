@@ -27,8 +27,6 @@ function Plants(props) {
             </ListGroup>
             <Card.Body>
               <NavLink to={"/plantdetails/" + plant.VegetableId}>See Details</NavLink>
-              <Card.Link href={"/plantdetails/" + plant.VegetableId}>See more info</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
             </Card.Body>
           </Card>
 
@@ -41,7 +39,7 @@ function Plants(props) {
       <div>
         <Breadcrumb>
           <Breadcrumb.Item active>Explore Plants</Breadcrumb.Item>
-          <Breadcrumb.Item href="/contactus">Contact Us</Breadcrumb.Item>
+          
         </Breadcrumb>
         <h1> All Plants </h1>
         <CardDeck>{plantItems}</CardDeck>
