@@ -1,20 +1,17 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
+import { NavLink } from 'react-router-dom'
 
-class Plants extends Component {
-  constructor() {
-    super();
-    this.state = {
-      plants: [],
-    };
-  }
+function Plants(props) {
 
-  render() {
-    let plantItems = this.props.listOfPlants.map((plant) => {
+  // plant details 
+   // props.match.params.vegetableId
+
+    let plantItems = props.listOfPlants.map((plant) => {
       return (
         <div key={plant.VegetableId}>
           <Card style={{ width: "18rem" }}>
@@ -29,7 +26,8 @@ class Plants extends Component {
               <ListGroupItem>Season: {plant.Season}</ListGroupItem>
             </ListGroup>
             <Card.Body>
-              <Card.Link href="/plantdetails">See more info</Card.Link>
+              <NavLink to={"/plantdetails/" + plant.VegetableId}>See Details</NavLink>
+              <Card.Link href={"/plantdetails/" + plant.VegetableId}>See more info</Card.Link>
               <Card.Link href="#">Another Link</Card.Link>
             </Card.Body>
           </Card>
@@ -37,6 +35,7 @@ class Plants extends Component {
           <br />
         </div>
       );
+
     });
     return (
       <div>
@@ -48,10 +47,11 @@ class Plants extends Component {
         <CardDeck>{plantItems}</CardDeck>
       </div>
     );
-  }
 }
 
-export default Plants;
+
+
+export default Plants
 
 // <img src={plant.ThumbnailImage} alt="vegetable" />
 //           <h2>{plant.Name}</h2>

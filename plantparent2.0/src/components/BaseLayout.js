@@ -29,4 +29,4 @@ export default BaseLayout;
 
 //AnotherCounter.js is the sibling of counter.js. Pass the properties from the parent to the additional child.
 
-//to reduce chaining, you can set a Global State. This allows any children to access the properties without having to back out through multiple parents.
+//to reduce chaining, you can set a Global State/Redux. This allows any children to access the properties without having to back out through multiple parents.

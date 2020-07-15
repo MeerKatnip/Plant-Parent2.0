@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Menu from "./components/Menu";
@@ -7,40 +7,42 @@ import Counter from "./components/Counter";
 import Plants from "./components/Plants";
 import TextInput from "./components/TextInput";
 import Home from "./components/Home";
+import { connect } from 'react-redux'
 
-// Fetches and renders plants from API
 
-// "https://cors-anywhere.herokuapp.com/" +
+function PlantMain(props) {
 
-class PlantMain extends Component {
-  constructor() {
-    super();
 
-    this.state = {
-      plants: [],
-    };
-  }
+  useEffect(() => {
 
-  componentDidMount() {
-    fetch(
-      "https://cors-anywhere.herokuapp.com/" +
-        "http://highoncoding.com/vegetable/getcatalog"
-    )
-      .then((res) => res.json())
-      .then((result) => {
-        this.setState({
-          plants: result,
-        });
-      });
-  }
+    fetch( "https://cors-anywhere.herokuapp.com/" +
+    "http://highoncoding.com/vegetable/getcatalog")
+    .then(response => response.json())
+    .then(data => {
+      props.onPlantsFetched(data)
+    })
 
-  render() {
+   
+  }, []);
+  
     return (
       <div>
-        <Plants listOfPlants={this.state.plants} />
+       <Plants listOfPlants = {props.plants} />
       </div>
     );
+
+}
+
+const mapStateToProps = (state) => {
+  return {
+    plants: state.plants
+}
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onPlantsFetched: (data) => dispatch({type: 'PLANTS_FETCHED', payload: data})
   }
 }
 
-export default PlantMain;
+export default connect(mapStateToProps, mapDispatchToProps)(PlantMain);
