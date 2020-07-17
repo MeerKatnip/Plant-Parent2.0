@@ -2,10 +2,14 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import Container from 'react-bootstrap'
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
+import { useAuth0 } from '@auth0/auth0-react'
+import LogoutButton from './logout-button'
+import LoginButton from './login-button'
 
 class Menu extends Component {
   render() {
