@@ -11,8 +11,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import LogoutButton from './logout-button'
 import LoginButton from './login-button'
 
-class Menu extends Component {
-  render() {
+function Menu() {
     return (
       <div>
         <Navbar bg="dark" expand="lg">
@@ -60,7 +59,7 @@ class Menu extends Component {
       </div>
     );
   }
-}
+
 
 export default Menu;
 
