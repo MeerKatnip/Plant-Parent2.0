@@ -7,6 +7,7 @@ import PlantMain from "./PlantMain";
 import * as serviceWorker from "./serviceWorker";
 import BaseLayout from "./components/BaseLayout";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Auth0ProviderWithHistory from './auth0-provider-with-history'
 import Plants from "./components/Plants";
 import ContactUs from "./components/ContactUs";
 import Home from "./components/Home";
@@ -28,6 +29,7 @@ const store = createStore(
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <Auth0ProviderWithHistory>
       <Provider store={store}>
         <BaseLayout>
           <Switch>
@@ -40,6 +42,7 @@ ReactDOM.render(
           </Switch>
         </BaseLayout>
       </Provider>
+      </Auth0ProviderWithHistory>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
