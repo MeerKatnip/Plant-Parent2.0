@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -10,6 +10,16 @@ import Button from "react-bootstrap/Button";
 import { useAuth0 } from '@auth0/auth0-react'
 import LogoutButton from './logout-button'
 import LoginButton from './login-button'
+
+const AuthNav = () => {
+  const { isAuthenticated } = useAuth0()
+
+  return (
+    <Nav className='justify-content-end'>
+      {isAuthenticated ? <LogoutButton/> : <LoginButton/>}
+    </Nav>
+  )
+}
 
 function Menu() {
     return (
@@ -46,6 +56,7 @@ function Menu() {
               </NavDropdown>
               <Nav.Link href="/contactus">Contact Us</Nav.Link>
             </Nav>
+            <AuthNav />
             <Form inline>
               <FormControl
                 type="text"

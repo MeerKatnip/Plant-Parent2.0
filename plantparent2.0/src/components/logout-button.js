@@ -6,7 +6,9 @@ const LogoutButton = () => {
     const { logout } = useAuth0()
     return (
         <Button
-        onClick={() => logout()}
+        onClick={() => logout({
+            returnTo: window.location.origin,
+        })}
         id='qsLogoutButton'
         variant='danger'
         className='btn-margin'
@@ -16,4 +18,4 @@ const LogoutButton = () => {
     )
 }
 
-export default LogoutButton
+export default LogoutButton;

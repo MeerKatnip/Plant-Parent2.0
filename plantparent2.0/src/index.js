@@ -6,7 +6,8 @@ import "./index.css";
 import PlantMain from "./PlantMain";
 import * as serviceWorker from "./serviceWorker";
 import BaseLayout from "./components/BaseLayout";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom"
 import Auth0ProviderWithHistory from './auth0-provider-with-history'
 import Plants from "./components/Plants";
 import ContactUs from "./components/ContactUs";
@@ -19,17 +20,21 @@ import UserInput from "./components/UserInput";
 import { createStore } from "redux";
 import reducer from "./store/reducer";
 import { Provider } from "react-redux";
+import { Container } from "react-bootstrap"
+
+
 
 const store = createStore(
   reducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
+
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <Auth0ProviderWithHistory>
+    <Router>
       <Provider store={store}>
+      <Auth0ProviderWithHistory>
         <BaseLayout>
           <Switch>
             <Route component={Home} path="/" exact />
@@ -39,9 +44,9 @@ ReactDOM.render(
             <Route component={ContactUs} path="/contact" />
           </Switch>
         </BaseLayout>
+        </Auth0ProviderWithHistory>
       </Provider>
-      </Auth0ProviderWithHistory>
-    </BrowserRouter>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );
