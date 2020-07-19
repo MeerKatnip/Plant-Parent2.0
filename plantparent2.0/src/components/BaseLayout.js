@@ -1,26 +1,15 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom"
-import { Container } from "react-bootstrap"
+import React, { Component } from "react";
 import Menu from "../components/Menu";
-import { Loading } from "./loading"
-import { Home, Profile, ExternalApi } from "../views"
-import { useAuth0 } from "@auth0/auth0-react"
 
-// import Counter from "../components/Counter";
+import Counter from "../components/Counter";
 // import Plants from "../components/Plants";
-// import TextInput from "../components/TextInput";
+import TextInput from "../components/TextInput";
 // import PlantMain from "../PlantMain";
-// import Home from "../components/Home";
-// import AnotherCounter from "./AnotherCounter";
+import Home from "../components/Home";
+import AnotherCounter from "./AnotherCounter";
 
-
-
-  const BaseLayout = () => {
-    const { isLoading } = useAuth0()
-
-    if(isLoading) {
-      return <Loading />
-    }
+class BaseLayout extends Component {
+  render() {
     return (
       <div>
         <Menu />
@@ -29,6 +18,7 @@ import { useAuth0 } from "@auth0/auth0-react"
         <a href="http://www.amycodes.me">Amycodes.me 2020</a>
       </div>
     );
+  }
 }
 
 export default BaseLayout;
