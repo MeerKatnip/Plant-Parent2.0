@@ -10,7 +10,6 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Plants from "./components/Plants";
 import ContactUs from "./components/ContactUs";
 import Home from "./components/Home";
-import AddPlant from "./components/AddPlant";
 import PlantDetails from "./components/PlantDetails";
 import NewUser from "./components/NewUser";
 import Register from "./components/RegistrationForm/Register"
@@ -34,7 +33,6 @@ ReactDOM.render(
           <Switch>
             <Route component={Home} path="/" exact />
             <Route component={PlantMain} path="/plantmain" />
-            <Route component={AddPlant} path="/addplant" />
             <Route component={PlantDetails} path="/plantdetails/:vegetableId" />
             <Route component={NewUser} path="/newuser" />
             <Route component={ContactUs} path="/contact" />
