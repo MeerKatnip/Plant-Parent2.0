@@ -1,4 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
+import { API_BASE_URL } from '../../constants/apiConstants';
+import { withRouter } from 'react-router-dom'
+
 
 
 function Register(props) {
@@ -6,6 +10,8 @@ function Register(props) {
     const [state, setState] = useState({
         email : "",
         password : "",
+        confirmPassword: "",
+        successMessage: null
     })
 
     const handleChange = (e) => {
@@ -14,6 +20,45 @@ function Register(props) {
             ...prevState,
             [id] : value,
         }))
+    }
+
+
+    const sendDetailsToServer = () => {
+        if(state.email.length && state.password.length) {
+            props.showError(null);
+            const payload={
+                "email": state.email,
+                "password": state.password,
+            }
+        axios.post(API_BASE_URL + 'register', payload)
+        .then(function (response) {
+            if(response.data.code === 200){
+                setState(prevState => ({
+                    ...prevState,
+                    'successMessage' : 'Registration successful! Redirecting to home page ...'
+                }))
+                redirectToHome();
+                props.showError(null)
+            } else {
+                props.showError("Some error occured");
+            }
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+        } else {
+            props.showError("Please enter valid username and password")
+        }
+    }
+
+    const redirectToHome = () => {
+        props.updateTitle('Home')
+        props.history.push('/home');
+    }
+
+    const redirectToLogin = () => {
+        props.updateTitle('Login')
+        props.history.push('/login');
     }
 
     const handleSubmitClick = (e) => {
@@ -39,7 +84,7 @@ function Register(props) {
                     onChange={handleChange}
                     />
 
-                <small id="emailHelp" className="form-text text-muted">We won't share your email with anyone, ever.</small>
+                <small id="emailHelp" className="form-text text-muted">We won't share your email with anyone.</small>
                 </div>
                 <div className="form-group text-left">
                     <label htmlFor="exampleInputPassword1">Password</label>
@@ -57,6 +102,8 @@ function Register(props) {
                         className="form-control" 
                         id="confirmPassword" 
                         placeholder="Confirm Password"
+                        value={state.confirmPassword}
+                        onChange={handleChange}
                     />
                 </div>
                 <button 
@@ -67,8 +114,16 @@ function Register(props) {
                     Register
                 </button>
             </form>
+            <div className="alert alert-success mt-2" style={{display: state.successMessage ? 'block' : 'none' }} role="alert">
+                {state.successMessage}
+            </div>
+            <div className="mt-2">
+                <span>Already have an account?</span>
+                <span className="loginText" onClick={() => redirectToLogin()}>Login here</span>
+
+            </div>
         </div>
     )
 }
 
-export default Register
+export default withRouter(Register)

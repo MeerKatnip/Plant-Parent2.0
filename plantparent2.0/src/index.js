@@ -7,13 +7,13 @@ import PlantMain from "./PlantMain";
 import * as serviceWorker from "./serviceWorker";
 import BaseLayout from "./components/BaseLayout";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Auth0ProviderWithHistory from './auth0-provider-with-history'
 import Plants from "./components/Plants";
 import ContactUs from "./components/ContactUs";
 import Home from "./components/Home";
 import AddPlant from "./components/AddPlant";
 import PlantDetails from "./components/PlantDetails";
 import NewUser from "./components/NewUser";
+import Register from "./components/RegistrationForm/Register"
 import DisplayUsers from "./components/DisplayUsers";
 import UserInput from "./components/UserInput";
 // import CtrRedux from "./components/CtrRedux";
@@ -29,7 +29,6 @@ const store = createStore(
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Auth0ProviderWithHistory>
       <Provider store={store}>
         <BaseLayout>
           <Switch>
@@ -39,10 +38,10 @@ ReactDOM.render(
             <Route component={PlantDetails} path="/plantdetails/:vegetableId" />
             <Route component={NewUser} path="/newuser" />
             <Route component={ContactUs} path="/contact" />
+            <Route component={Register} path="/register" />
           </Switch>
         </BaseLayout>
       </Provider>
-      </Auth0ProviderWithHistory>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
