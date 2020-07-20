@@ -2,14 +2,15 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 var jwt = require('jsonwebtoken')
+const models = require('./models')
+const bcrypt = require('bcrypt')
+const dotenv = require('dotenv')
 
+dotenv.config()
 app.use(cors());
 app.use(express.json())
 
-let users = [
-  { email: "Johndoe@email.com", password: "password" },
-  { email: "Marysmith@email.com", password: "password" },
-];
+
 
 app.get('/my-plants',(req,res) => {
 
@@ -19,26 +20,55 @@ app.get('/my-plants',(req,res) => {
 
 
 
-app.post("/api/login", (req, res) => {
+app.post("/api/login", async(req, res) => {
   const email = req.body.email
   const password = req.body.password
 
-const persistedUser = users.find(user => {
-  return (user.email == email && user.password == password)
+
+// const persistedUser = users.find(user => {
+//   return (user.email == email && user.password == password)
+// })
+const user = await models.User.findOne({
+  where: {
+    email: email
+  }
 })
+console.log(user)
 
-if(persistedUser) {
+if(user) {
+  const isUser = await bcrypt.compare(password, user.password)
+  if(isUser) {
+     //create a token
+     console.log(process.env.JWT_KEY)
+  const token = jwt.sign({email: email}, process.env.JWT_KEY)
 
-  //create a token
-  jwt.sign({email: email}, 'keyboard cat')
-
-  res.json({success: true})
-} else {
-  res.json({success: false})
-}
+  res.json({success: true, token: token})
+  } else {
+    res.json({success: false})
+  }
+ 
+  } else {
+    res.json({success: false})
+  }
 
   
 })
+
+app.post('/api/register', async(req, res) => {
+  const email = req.body.email
+  const password = await bcrypt.hash( req.body.password, 10)
+  try{
+    const user = await models.User.create({email: email, password: password})
+    console.log(user)
+    res.send(user)
+  } catch (error){
+    console.log(error)
+    res.send(error)
+  }
+  
+  
+})
+
 
 app.get("/users", (req, res) => {
   res.json(users);

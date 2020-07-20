@@ -13,7 +13,7 @@ function PlantDetails(props) {
 
     let vegId = props.match.params.vegetableId 
     let plant = props.plants.find(veg => {
-      return veg.VegetableId == vegId
+      return veg.VegetableId === vegId
     })
 
     setSinglePlant(plant)

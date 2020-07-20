@@ -13,6 +13,7 @@ import Home from "./components/Home";
 import PlantDetails from "./components/PlantDetails";
 import NewUser from "./components/NewUser";
 import Register from "./components/RegistrationForm/Register"
+import Login from './components/LoginForm/Login'
 import DisplayUsers from "./components/DisplayUsers";
 import UserInput from "./components/UserInput";
 // import CtrRedux from "./components/CtrRedux";
@@ -37,6 +38,7 @@ ReactDOM.render(
             <Route component={NewUser} path="/newuser" />
             <Route component={ContactUs} path="/contact" />
             <Route component={Register} path="/register" />
+            <Route component={Login} path="/login" />
           </Switch>
         </BaseLayout>
       </Provider>
