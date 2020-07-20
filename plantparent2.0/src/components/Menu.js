@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -7,8 +7,7 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 
-class Menu extends Component {
-  render() {
+function Menu() {
     return (
       <div>
         <Navbar bg="dark" expand="lg">
@@ -27,6 +26,8 @@ class Menu extends Component {
             <Nav className="mr-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/plantmain">Explore Plants</Nav.Link>
+              <Nav.Link href="/register">Register</Nav.Link>
+
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
@@ -40,6 +41,7 @@ class Menu extends Component {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
+              <Nav.Link href="/contactus">Contact Us</Nav.Link>
             </Nav>
             <Form inline>
               <FormControl
@@ -54,7 +56,7 @@ class Menu extends Component {
       </div>
     );
   }
-}
+
 
 export default Menu;
 

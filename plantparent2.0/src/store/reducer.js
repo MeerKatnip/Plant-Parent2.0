@@ -1,16 +1,23 @@
 const initialState = {
-  counter: 99,
-  name: "John Doe",
+  plants: []
 };
 
 const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "INC":
-      return {
-        ...state,
-        counter: state.counter + 1,
-      };
+
+  if(action.type === "PLANTS_FETCHED") {
+    return {
+      ...state,
+      plants: action.payload
+    }
   }
+
+  // switch (action.type) {
+  //   case "INC":
+  //     return {
+  //       ...state,
+  //       plants: state.counter + 1,
+  //     };
+  // }
 
   //ALTERNATIVE IF/ELSE instead of SWITCH above. Switch is preferred:
   //   if (action.type == "INC") {
