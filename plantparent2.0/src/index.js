@@ -33,7 +33,7 @@ ReactDOM.render(
       <Provider store={store}>
         <BaseLayout>
           <Switch>
-            <Route component={Home} path="/" exact />
+            <Route component={PlantMain} path="/" exact />
             <Route component={PlantMain} path="/plantmain" />
             <Route component={PlantDetails} path="/plantdetails/:vegetableId" />
             <Route component={AboutUs} path="/aboutus" />

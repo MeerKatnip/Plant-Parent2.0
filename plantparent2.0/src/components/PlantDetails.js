@@ -12,12 +12,12 @@ function PlantDetails(props) {
 
     let vegId = props.match.params.vegetableId 
     let plant = props.plants.find(veg => {
-      return veg.VegetableId === vegId
+      return veg.VegetableId == vegId
     })
 
 
     setSinglePlant(plant)
-    console.log(plant)
+    console.log(vegId)
   },[]) 
 
     return (
@@ -55,6 +55,7 @@ function PlantDetails(props) {
   }
 
   const mapStateToProps = (state) => {
+    
     return {
       plants: state.plants
   }
