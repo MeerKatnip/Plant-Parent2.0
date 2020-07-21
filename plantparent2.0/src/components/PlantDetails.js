@@ -26,7 +26,7 @@ function PlantDetails(props) {
           <Breadcrumb.Item href="/plantmain">Explore Plants</Breadcrumb.Item>
           <Breadcrumb.Item active>{singlePlant.Name}</Breadcrumb.Item>
         </Breadcrumb>
-        <h1>Plant Details</h1>
+        {/* <h1>Plant Details</h1> */}
         <h2>{singlePlant.Name}</h2>
         <img src={singlePlant.ThumbnailImage} />
         <p>{singlePlant.Description}</p>

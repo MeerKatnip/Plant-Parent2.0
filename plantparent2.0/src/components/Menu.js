@@ -10,16 +10,15 @@ import Button from "react-bootstrap/Button";
 function Menu() {
     return (
       <div>
-        <Navbar bg="dark" expand="lg">
+        <Navbar bg="light" expand="lg">
           <Navbar.Brand href="/">
             <img
-              src="/flowerlogo192.png"
-              width="30"
-              height="30"
+              src="/logonavbar.png"
+              width="150"
+              height="40"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
-            Plant Parent
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
