@@ -39,7 +39,7 @@ function Plants(props) {
           <Breadcrumb.Item active>Explore Plants</Breadcrumb.Item>
           
         </Breadcrumb>
-        <h1> Explore Plants </h1>
+        {/* <h1> Explore Plants </h1> */}
         <CardDeck>{plantItems}</CardDeck>
       </div>
     );

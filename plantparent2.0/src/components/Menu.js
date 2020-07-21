@@ -10,47 +10,29 @@ import Button from "react-bootstrap/Button";
 function Menu() {
     return (
       <div>
-        <Navbar bg="dark" expand="lg">
+        <Navbar bg="light" expand="lg">
           <Navbar.Brand href="/">
             <img
-              src="/flowerlogo192.png"
-              width="30"
-              height="30"
+              src="/logonavbar.png"
+              width="150"
+              height="40"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
-            Plant Parent
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/mygreenhouse">My Greenhouse</Nav.Link>
               <Nav.Link href="/plantmain">Explore Plants</Nav.Link>
-              <Nav.Link href="/register">Register</Nav.Link>
-
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="/contactus">Contact Us</Nav.Link>
+              <Nav.Link href="/aboutus">About Us</Nav.Link>
             </Nav>
-            <Form inline>
-              <FormControl
-                type="text"
-                placeholder="Search"
-                className="mr-sm-2"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
+            
+            <Nav className="ml-auto">
+            <Nav.Link href="/register">Register</Nav.Link>
+              <Nav.Link href="/login">Login</Nav.Link>
+            </Nav>
+            
           </Navbar.Collapse>
         </Navbar>
       </div>
@@ -79,3 +61,28 @@ export default Menu;
           </li>
         </ul> */
 }
+
+//dropdown element
+{/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Something
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">
+                  Separated link
+                </NavDropdown.Item>
+              </NavDropdown> */}
+
+//search bar element
+{/* <Form inline>
+              <FormControl
+                type="text"
+                placeholder="Search"
+                className="mr-sm-2"
+              />
+              <Button variant="outline-success">Search</Button>
+            </Form> */}

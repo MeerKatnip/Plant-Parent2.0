@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Menu from "../components/Menu";
+import '../App.css'
 
 import Counter from "../components/Counter";
 // import Plants from "../components/Plants";
@@ -11,7 +12,7 @@ import AnotherCounter from "./AnotherCounter";
 class BaseLayout extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <Menu />
 
         {this.props.children}
