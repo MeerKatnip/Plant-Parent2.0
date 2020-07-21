@@ -12,22 +12,12 @@ app.use(express.json())
 
 
 
-app.get('/my-plants',(req,res) => {
-
-
-
-})
-
-
-
 app.post("/api/login", async(req, res) => {
   const email = req.body.email
   const password = req.body.password
 
 
-// const persistedUser = users.find(user => {
-//   return (user.email == email && user.password == password)
-// })
+
 const user = await models.User.findOne({
   where: {
     email: email
