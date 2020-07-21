@@ -8,6 +8,8 @@ import BaseLayout from "./components/BaseLayout";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Plants from "./components/Plants";
 import AboutUs from "./components/AboutUs";
+import Home from './components/Home'
+import NewUser from './components/NewUser'
 import PlantDetails from "./components/PlantDetails";
 import Register from "./components/RegistrationForm/Register"
 import Login from './components/LoginForm/Login'
@@ -31,7 +33,7 @@ ReactDOM.render(
       <Provider store={store}>
         <BaseLayout>
           <Switch>
-            <Route component={PlantMain} path="/" exact />
+            <Route component={Home} path="/" exact />
             <Route component={PlantMain} path="/plantmain" />
             <Route component={PlantDetails} path="/plantdetails/:vegetableId" />
             <Route component={AboutUs} path="/aboutus" />
