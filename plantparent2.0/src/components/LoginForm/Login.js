@@ -26,6 +26,7 @@ function Login(props) {
         }
         axios.post(API_BASE_URL+'login', payload)
         .then(function (response) {
+            console.log(response)
             if(response.data.code === 200){
                 setState(prevState => ({
                     ...prevState,
@@ -37,7 +38,7 @@ function Login(props) {
             else if(response.data.code === 204){
                 props.showError("Username and password do not match");
             } else{
-                props.showError("Username does not exist");
+                // props.showError("Username does not exist");
             }
         })
         .catch(function (error) {
