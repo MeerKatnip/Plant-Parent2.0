@@ -10,15 +10,15 @@ function PlantDetails(props) {
 
   useEffect(() => {
 
-
     let vegId = props.match.params.vegetableId 
     let plant = props.plants.find(veg => {
       return veg.VegetableId === vegId
     })
 
+
     setSinglePlant(plant)
     console.log(plant)
-  },[])
+  },[]) 
 
     return (
       <span>
