@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import Plants from "./Plants";
-import Breadcrumb from "react-bootstrap/Breadcrumb";
+// import Breadcrumb from "react-bootstrap/Breadcrumb";
 import { connect } from 'react-redux'
 
 
@@ -12,20 +12,23 @@ function PlantDetails(props) {
 
     let vegId = props.match.params.vegetableId 
     let plant = props.plants.find(veg => {
-      return veg.VegetableId == vegId
+      console.log(veg.VegetableId)
+      return veg.VegetableId == parseInt(vegId)
     })
-
+    console.log(plant)
 
     setSinglePlant(plant)
-    console.log(vegId)
+    
   },[]) 
 
     return (
+
+    
       <span>
-        <Breadcrumb>
+        {/* <Breadcrumb>
           <Breadcrumb.Item href="/plantmain">Explore Plants</Breadcrumb.Item>
           <Breadcrumb.Item active>{singlePlant.Name}</Breadcrumb.Item>
-        </Breadcrumb>
+        </Breadcrumb> */}
         {/* <h1>Plant Details</h1> */}
         <h2>{singlePlant.Name}</h2>
         <img src={singlePlant.ThumbnailImage} />
@@ -48,7 +51,7 @@ function PlantDetails(props) {
         <p>Harvest Description: {singlePlant.HarvestDescription}</p>
         Days to Harvest Seeds: {singlePlant.DaysToHarvestSeeds}<br/>
         Days to Harvest Seedlings: {singlePlant.DaysToHarvestSeedlings}<br/>
-    
+        <div><button type="button" className="btn btn-success">Add to My Greenhouse</button></div>
       </span>
     )
       

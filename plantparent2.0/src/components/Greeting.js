@@ -6,7 +6,7 @@ import '../App.css'
 function Greeting() {
     return (
       <div>
-        <img src={bg} class="img-fluid" alt="Responsive image"/>
+        <img src={bg} className="img-fluid" alt="Responsive image"/>
       </div>
     );
   }

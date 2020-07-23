@@ -13,6 +13,13 @@
   }
 }
 
+
+  .NavLink, a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -50,8 +57,9 @@
   display: flex;
   justify-content: center;
  
-  
 }
+
+
 
 /* body, html {
   background-image: url(./images/greenbg.jpg);

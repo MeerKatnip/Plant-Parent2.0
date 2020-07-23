@@ -1,4 +1,5 @@
 import React from "react";
+import '../App.css'
 import { NavLink } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -11,26 +12,27 @@ function Menu() {
     return (
       <div>
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="/">
+          <Navbar.Brand>
+            <NavLink to="/">
             <img
               src="/logonavbar.png"
               width="150"
               height="40"
               className="d-inline-block align-top"
-              alt="React Bootstrap logo"
-            />
+              alt="Plant Parent logo"
+            /></NavLink>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="/mygreenhouse">My Greenhouse</Nav.Link>
-              <Nav.Link href="/plantmain">Explore Plants</Nav.Link>
-              <Nav.Link href="/aboutus">About Us</Nav.Link>
+              <NavLink to="/mygreenhouse">My Greenhouse</NavLink>
+              <NavLink to="/plantmain">Explore Plants</NavLink>
+              <NavLink to="/aboutus">About Us</NavLink>
             </Nav>
             
             <Nav className="ml-auto">
-            <Nav.Link href="/register">Register</Nav.Link>
-              <Nav.Link href="/login">Login</Nav.Link>
+            <NavLink to="/register">Register</NavLink>
+              <NavLink to="/login">Login</NavLink>
             </Nav>
             
           </Navbar.Collapse>
