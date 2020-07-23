@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import '../App.css'
-import Breadcrumb from "react-bootstrap/Breadcrumb";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -17,7 +16,7 @@ function Plants(props) {
 
       let plantItems = props.listOfPlants.map((plant) => {
         return (
-          <div key={plant.VegetableId} class="shadow p-3 mb-5 bg-white rounded">
+          <div key={plant.VegetableId} className="shadow p-3 mb-5 bg-white rounded">
             <Card style={{ width: "18rem" }} border="success">
               <Card.Img variant="top" src={plant.ThumbnailImage} />
               <Card.Body>
@@ -30,7 +29,9 @@ function Plants(props) {
                 <ListGroupItem>Season: {plant.Season}</ListGroupItem>
               </ListGroup>
               <Card.Body>
-                <NavLink to={"/plantdetails/" + plant.VegetableId}>See Details</NavLink>
+              <div><button type="button" className="btn btn-success">Add to My Greenhouse</button></div>
+            
+              <div><NavLink to={"/plantdetails/" + plant.VegetableId}><button type="button" className="btn btn-outline-success">More Plant Details</button></NavLink></div>
               </Card.Body>
             </Card>
 
