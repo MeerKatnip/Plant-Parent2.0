@@ -37,9 +37,25 @@
   }
 }
 
-body, html {
+.card {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px ;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.img-fluid {
+  /* padding: 50px 50px 50px 50px; */
+  display: flex;
+  justify-content: center;
+ 
+  
+}
+
+/* body, html {
   background-image: url(./images/greenbg.jpg);
   height: 100%;
   margin: 0;
-}
+} */
 
