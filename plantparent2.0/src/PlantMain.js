@@ -7,7 +7,6 @@ import Plants from "./components/Plants";
 // import TextInput from "./components/TextInput";
 // import Home from "./components/Home";
 import { connect } from 'react-redux'
-import Greeting from '../src/components/Greeting'
 
 
 function PlantMain(props) {
