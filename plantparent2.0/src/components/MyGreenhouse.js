@@ -24,7 +24,7 @@ function MyGreenhouse(props) {
             <ListGroupItem>Season: {plant.Season}</ListGroupItem>
           </ListGroup>
           <Card.Body>
-          <div><button type="button" className="btn btn-success">Add to My Greenhouse</button></div>
+          
         
           <div><NavLink to={"/plantdetails/" + plant.VegetableId}><button type="button" className="btn btn-outline-success">More Plant Details</button></NavLink></div>
           </Card.Body>
