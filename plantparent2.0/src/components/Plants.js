@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '../App.css'
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import Card from "react-bootstrap/Card";
@@ -12,7 +12,6 @@ import Greeting from './Greeting'
 
 
 function Plants(props) {
-  
   
   
 
@@ -42,12 +41,16 @@ function Plants(props) {
         
     });
 
-    return (
-      <div>
-        <Greeting/>
-        <CardDeck>{plantItems}</CardDeck>
-      </div>
-    );
+    
+      return (
+        <div>
+          <Greeting/>
+          <CardDeck>{plantItems}</CardDeck>
+        </div>
+      );
+
+    
+    
     
 }
 
